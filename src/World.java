@@ -17,6 +17,11 @@ public class World {
         Item map = new Item("Map", "A torn and faded map of the house.");
         Item skull = new Item("Skull","A human skull with cracks running through it.");
         
+        Item combination = new Combination("Combination", "A small slip of paper with numbers on it.");
+        Item safe = new Safe("Safe", "It's an impressive safe!");
+        
+        library.addItem(combination);
+        basement.addItem(safe);
         
         foyer.addItem(key);
         foyer.addItem(book);
