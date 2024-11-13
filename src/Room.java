@@ -2,15 +2,30 @@ import java.util.HashMap;
 
 public class Room {
 	private String description;
+	private String name;
+	private boolean locked;
     private Room east, west, north, south, up, down;
     private HashMap<String, Item> items = new HashMap<>();
 
     
-    public Room(String description) {
-        this.description = description;	
-        this.items = new HashMap<>();
+    public Room(String name, String description) {
+        this.name = name;
+        this.description = description;
+        this.locked = false;
 
 }
+    public String getName() {
+    	return name;
+    	
+    }
+    
+    public boolean isLocked() {
+    	return locked;
+    }
+    
+    public void setLocked(boolean locked) {
+    	this.locked = locked;
+    }
     
     public void addItem(Item item)  {
     	items.put(item. getName().toLowerCase(), item);
