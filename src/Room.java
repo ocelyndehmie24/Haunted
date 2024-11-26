@@ -1,82 +1,69 @@
 import java.util.HashMap;
 
 public class Room {
-	private String description;
-	private String name;
-	private boolean locked;
+    private String name;
+    private boolean locked;
     private Room east, west, north, south, up, down;
     private HashMap<String, Item> items = new HashMap<>();
+    private HashMap<String, NPC> npcs = new HashMap<>();
 
-    
-    public Room(String name, String description) {
+    public Room(String name) {
         this.name = name;
-        this.description = description;
         this.locked = false;
+    }
 
-}
     public String getName() {
-    	return name;
-    	
+        return name;
     }
-    
+
     public boolean isLocked() {
-    	return locked;
+        return locked;
     }
-    
+
     public void setLocked(boolean locked) {
-    	this.locked = locked;
+        this.locked = locked;
     }
-    
-    public void addItem(Item item)  {
-    	items.put(item. getName().toLowerCase(), item);
+
+    public void addItem(Item item) {
+        items.put(item.getName().toLowerCase(), item);
     }
-    
+
     public Item getItem(String itemName) {
-    	return items.get(itemName.toLowerCase());
+        return items.get(itemName.toLowerCase());
     }
-    
+
     public Item removeItem(String itemName) {
-    	return items.remove(itemName.toLowerCase());
+        return items.remove(itemName.toLowerCase());
     }
-    
-   
+
     public void addExit(Room room, char direction) {
-    	if (direction == 'e')
-    		east = room;
-    	else if (direction == 'w')
-    		west = room;
-    	else if (direction == 'n')
-    		north = room;
-    	else if (direction == 's')
-    		south = room;
-    	else if (direction == 'u')
-    		up = room;
-    	else if (direction == 'd')
-    		down = room;
+        switch (direction) {
+            case 'e' -> east = room;
+            case 'w' -> west = room;
+            case 'n' -> north = room;
+            case 's' -> south = room;
+            case 'u' -> up = room;
+            case 'd' -> down = room;
+        }
     }
-    
+
     public Room getExit(char direction) {
-    	if (direction == 'e')
-    		return east;
-    	else if (direction == 'w')
-    		return west;
-    	else if (direction == 'n')
-    		return north;
-    	else if (direction == 's')
-    		return south;
-    	else if (direction == 'u')
-    		return up;
-    	else if (direction == 'd')
-    		return down;
-    	else
-    		return null;  
-    
+        return switch (direction) {
+            case 'e' -> east;
+            case 'w' -> west;
+            case 'n' -> north;
+            case 's' -> south;
+            case 'u' -> up;
+            case 'd' -> down;
+            default -> null;
+        };
     }
 
+    public void addNPC(NPC npc) {
+        npcs.put(npc.getName().toLowerCase(), npc);
+    }
 
-   
-   public String toString() {
-   	return description;
-   	
-   }
+    public NPC getNPC(String npcName) {
+        return npcs.get(npcName.toLowerCase());
+    }
 }

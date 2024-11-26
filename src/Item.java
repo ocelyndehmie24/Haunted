@@ -1,8 +1,14 @@
 public class Item {
-    private String name;
-    private String description;
+    private final String name;
+    private final String description;
 
     public Item(String name, String description) {
+        if (name == null || name.trim().isEmpty()) {
+            throw new IllegalArgumentException("Item name cannot be null or empty.");
+        }
+        if (description == null || description.trim().isEmpty()) {
+            throw new IllegalArgumentException("Item description cannot be null or empty.");
+        }
         this.name = name;
         this.description = description;
     }
@@ -16,14 +22,15 @@ public class Item {
     }
 
     public void open() {
-        Game.print("You can't open that!");
+        System.out.println("You can't open that!");
     }
 
     public void use() {
-        Game.print("You can't use that!");
+        System.out.println("You can't use that!");
     }
 
+    
     public String toString() {
-        return name;
+        return name + ": " + description;
     }
 }
