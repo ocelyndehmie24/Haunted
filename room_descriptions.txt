@@ -1,0 +1,17 @@
+Foyer
+You are in a dimly lit foyer.
+#
+Hallway
+You are in a long, narrow hallway with creepy paintings.
+#
+Library
+You are in a dusty old library filled with ancient books.
+#
+Basement
+You are in a cold, damp basement. The walls are crumbling.
+#
+Attic
+You are in a dark, cluttered attic.
+#
+Kitchen
+You are in a decrepit kitchen. The appliances are rusted and broken.
