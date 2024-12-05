@@ -5,7 +5,7 @@ public class Puppy extends NPC {
         super("puppy", "A hideous puppy wags his tail.");
     }
 
-    
+    @Override
     public void talk() {
         switch (dialogCount) {
             case 0 -> {
@@ -14,7 +14,8 @@ public class Puppy extends NPC {
                     "Yes you are! Who's a good boy?",
                     "Ew, no. You're actually kinda hideous."
                 };
-                response(Game.scanOption(options));
+                int choice = Game.scanOption(options);
+                response(choice);
                 dialogCount++;
             }
             case 1 -> {
@@ -23,7 +24,8 @@ public class Puppy extends NPC {
                     "Yes! I love fetch!",
                     "No. I am a horrible person and don't like playing with puppies."
                 };
-                response(Game.scanOption(options));
+                int choice = Game.scanOption(options);
+                response(choice);
                 dialogCount++;
             }
             default -> Game.print("Yip! *wags tail*");

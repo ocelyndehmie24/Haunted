@@ -12,6 +12,7 @@ public class NPC {
     }
 
     public void talk() {
-        Game.print("You can't talk to " + name + ".");
+        Game.print(name + ": " + description);
+        talk();
     }
 }

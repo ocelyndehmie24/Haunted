@@ -66,4 +66,12 @@ public class Room {
     public NPC getNPC(String npcName) {
         return npcs.get(npcName.toLowerCase());
     }
+    
+    public boolean hasNPC(String npcName) {
+    	return npcs.containsKey(npcName.toLowerCase());
+    }
+    
+    public boolean hasItem(String itemName) {
+    	return items.containsKey(itemName.toLowerCase());
+    }
 }

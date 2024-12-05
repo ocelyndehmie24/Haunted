@@ -54,6 +54,26 @@ public class Game {
     public static void print(String message) {
         System.out.println(message);
     }
+    
+    public static int scanOption(String[] options) {
+        for (int i = 0; i < options.length; i++) {
+            System.out.println((i + 1) + ". " + options[i]);
+        }
+        while (true) {
+            System.out.print("Choose an option: ");
+            String input = scan.nextLine();
+            try {
+                int choice = Integer.parseInt(input);
+                if (choice > 0 && choice <= options.length) {
+                    return choice;
+                } else {
+                    System.out.println("Invalid choice. Please choose a valid option.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
+            }
+        }
+    }
 
     public static void main(String[] args) {
         loadRoomDescriptions("room_descriptions.txt");
@@ -110,6 +130,7 @@ public class Game {
                         }
                     }
                     break;
+                    
                 case "move":
                     if (parameter == null || parameter.length() != 1) {
                         print("Move where? (n, s, e, w, u, d)");
@@ -141,6 +162,7 @@ public class Game {
                     break;
                 default:
                     print("I don't understand that command.");
+                    print("Available commands: look, move <direction>, take <item>");
                     break;
             }
         }

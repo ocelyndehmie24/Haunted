@@ -26,11 +26,12 @@ public class Item {
     }
 
     public void use() {
-        System.out.println("You can't use that!");
+        System.out.println("This item doesn't seem to do anything special.");
     }
 
     
     public String toString() {
         return name + ": " + description;
     }
+    
 }

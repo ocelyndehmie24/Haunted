@@ -10,25 +10,43 @@
             "I'm sorry! I'll leave now.",
             "I seek your wisdom."
         };
-        getResponse(options);
+        int choice = getResponse(options);
+        response(choice);
     }
 
-    private void getResponse(String[] options) {
-		// TODO Auto-generated method stub
-		
-	}
+    private void say(String message) {
+        System.out.println("Ghost: " + message);
+    }
 
-	private void say(String string) {
-		// TODO Auto-generated method stub
-		
-	}
+    private int getResponse(String[] options) {
+        for (int i = 0; i < options.length; i++) {
+            System.out.println((i + 1) + ". " + options[i]);
+        }
+        while (true) {
+            System.out.print("Choose an option: ");
+            String input = Game.scan.nextLine();
+            try {
+                int choice = Integer.parseInt(input);
+                if (choice > 0 && choice <= options.length) {
+                    return choice;
+                } else {
+                    System.out.println("Invalid choice. Please choose a valid option.");
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Invalid input. Please enter a number.");
+            }
+        }
+    }
 
-	@Override
+    
     public void response(int option) {
-        switch (option) {
-            case 1 -> say("Leave now and never return!");
-            case 2 -> say("Find the scroll and you shall have my wisdom.");
-            default -> Game.print("The ghost stares at you in silence, unimpressed by your incoherence.");
+        if (option == 1) {
+            say("Leave now and never return!");
+        } else if (option == 2) {
+            say("Find the scroll and you shall have my wisdom.");
+        } else {
+            say("I do not understand your choice.");
         }
     }
 }
+
