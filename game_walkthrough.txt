@@ -1,0 +1,138 @@
+Welcome to the Haunted Escape Room!
+You are in a dimly lit foyer.
+> look
+You are in a dimly lit foyer.
+> take key
+You took the Key.
+> take map
+You took the Map.
+> move e
+You moved to Hallway.
+You are in a long, narrow hallway with creepy paintings.
+> take candle
+You took the Candle.
+> take skull
+You took the Skull.
+> talk puppy
+Hi! I'm an adorable puppy!
+1. Yes you are! Who's a good boy?
+2. Ew, no. You're actually kinda hideous.
+Choose an option: 1
+> 
+I don't understand that command.
+Available commands: look, move <direction>, take <item>
+> 2
+I don't understand that command.
+Available commands: look, move <direction>, take <item>
+> talk puppy
+Hey! Wanna play fetch?
+1. Yes! I love fetch!
+2. No. I am a horrible person and don't like playing with puppies.
+Choose an option: 1
+I am! I'm a good boy!
+> move n
+The Library is locked.
+> use key
+You unlocked the Library.
+> take book
+No such item here.
+> take combination
+No such item here.
+> move s
+You can't go that way.
+> move u
+You moved to Attic.
+You are in a dark, cluttered attic.
+> take mirror
+You took the Mirror.
+> take scroll
+You took the Scroll.
+> use scroll
+The scroll reveals a hidden message: 'Seek the key where the skulls lie.'
+> move d
+You moved to Hallway.
+You are in a long, narrow hallway with creepy paintings.
+> move e
+You moved to Kitchen.
+You are in a decrepit kitchen. The appliances are rusted and broken.
+> talk ghost
+Ghost: Who dares disturb my rest?
+1. I'm sorry! I'll leave now.
+2. I seek your wisdom.
+Choose an option: 2
+Ghost: Find the scroll and you shall have my wisdom.
+> take knife
+You took the Knife.
+> take potion
+You took the Potion.
+> use potion
+You drink the potion, and a shield materializes in your hands!
+> move w
+You moved to Hallway.
+You are in a long, narrow hallway with creepy paintings.
+> move d
+You can't go that way.
+> look
+You are in a long, narrow hallway with creepy paintings.
+> use combination
+You don't have that item.
+> take diamond
+No such item here.
+> move e
+You moved to Kitchen.
+You are in a decrepit kitchen. The appliances are rusted and broken.
+> move d
+You can't go that way.
+> move w
+You moved to Hallway.
+You are in a long, narrow hallway with creepy paintings.
+> move d
+You can't go that way.
+> move e
+You moved to Kitchen.
+You are in a decrepit kitchen. The appliances are rusted and broken.
+> move u
+You can't go that way.
+> move s
+You can't go that way.
+> move n
+You can't go that way.
+> move e
+You can't go that way.
+> move w
+You moved to Hallway.
+You are in a long, narrow hallway with creepy paintings.
+> move n
+You moved to Library.
+You are in a dusty old library filled with ancient books.
+> move s
+You moved to Hallway.
+You are in a long, narrow hallway with creepy paintings.
+> move u
+You moved to Attic.
+You are in a dark, cluttered attic.
+> move d
+You moved to Hallway.
+You are in a long, narrow hallway with creepy paintings.
+> move u
+You moved to Attic.
+You are in a dark, cluttered attic.
+> look
+You are in a dark, cluttered attic.
+> use combination
+You don't have that item.
+> use mirror
+You look into the mirror and suddenly find yourself in Basement.
+> look
+You are in a cold, damp basement. The walls are crumbling.
+> use combination
+You don't have that item.
+> take diamond
+No such item here.
+> use mirror
+You look into the mirror and suddenly find yourself in Attic.
+> use mirror
+You look into the mirror and suddenly find yourself in Library.
+> use mirror
+You look into the mirror and suddenly find yourself in Foyer.
+> 
